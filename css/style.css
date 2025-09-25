@@ -67,7 +67,7 @@ ul {
     position: absolute;
     top: 20px;
     right: 30px;
-    z-index: 200;
+    z-index: 20000;
     display: none;
 }
 
@@ -392,6 +392,7 @@ ul {
 
     .main-nav ul.main-menu.show {
         transform: translateX(-20px);
+        z-index: 10000000;
 
     }
 
