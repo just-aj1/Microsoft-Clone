@@ -131,7 +131,7 @@ ul {
     text-align: left;
     justify-content: left;
     padding-left: 70px;
-    width: 50%;
+    width: min(80%, 600px);
     gap: 1rem;
     color: black;
 }
@@ -427,5 +427,10 @@ ul {
 
     .links .links-inner ul {
         margin-bottom: 20px;
+    }
+
+    .info {
+        position: relative;
+        top: -350px;
     }
 }
