@@ -27,6 +27,11 @@ ul {
     margin: auto;
 }
 
+.container.full {
+    width: 100%;
+    max-width: none;
+}
+
 /* Nav */
 .main-nav .logo {
     width: 110px;
@@ -39,6 +44,10 @@ ul {
     height: 60px;
     padding: 20px 0;
     font-size: 13px;
+}
+
+.main-nav.onfull {
+    padding: 10px 50px;
 }
 
 .main-nav ul {
@@ -116,6 +125,7 @@ ul {
     height: 100%;
     width: 100%;
     position: relative;
+    object-fit: cover;
 }
 
 .slide {
@@ -475,6 +485,15 @@ details p {
 }
 
 /* xbox page */
+h5 {
+    font-size: 14px;
+    margin-bottom: 20px;
+    padding-inline: 10px;
+    width: fit-content;
+    background-color: rgb(255, 240, 71);
+}
+
+
 .showcase3 {
     width: 100%;
     height: 400px;
@@ -488,68 +507,87 @@ details p {
     margin-bottom: 20px;
 }
 
-.display {
+.xbox-grid {
     display: flex;
-    justify-content: center;
-    margin-top: 1rem;
+    gap: 4px;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.grid-col {
+    flex: 1;
+}
+
+.grid-content.short {
+    height: 60vh;
     width: 100%;
-    gap: 0.5rem;
+    background-color: grey;
+    margin-bottom: 4px;
+    position: relative;
+
 }
 
-.side1 {
-    width: 50%;
-    height: 100%;
-    gap: 1rem;
-    margin: 0;
+.grid-content.short>.image {
+    object-fit: contain;
+    object-position: right;
 }
 
-.side2 {
-    width: 50%;
-    height: 100%;
-    gap: 1rem;
-    margin: 0;
-}
-
-.display img {
+.grid-content.long {
+    height: 120vh;
     width: 100%;
-    height: auto;
+    background-color: rgb(33, 33, 33);
+    margin-bottom: 4px;
+    position: relative;
+}
+
+div.grid-content.long>div>h2 {
+    color: white;
+    margin-bottom: 30px;
+}
+
+div.grid-content.long>div>p {
+    color: rgb(200, 200, 200);
+    margin-bottom: 30px;
+
+}
+
+.image {
+    min-width: 100%;
+    max-width: 50vw;
+    height: inherit;
+    object-fit: cover;
+}
+
+.text-long {
+    position: absolute;
+    bottom: 7%;
+    left: 0px;
+    padding-left: 3vw;
+    display: block;
+    align-items: left;
+    z-index: 100000;
+}
+
+.text-short {
+    position: absolute;
+    display: block;
+    align-items: left;
+    z-index: 0;
+    height: 60vh;
+    width: 25vw;
+    background-color: green;
 }
 
 .text {
-    background: green;
-
-}
-
-.card1 {
-    height: 60vh;
-}
-
-.card2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 40vh;
-}
-
-.card3 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.card4 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 40vh;
-    margin: 0;
-    padding: 10px;
-}
-
-.card5 {
-    height: 60%;
-}
-
-.card6 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    position: relative;
+    display: block;
+    align-items: left;
+    z-index: 100000;
+    top: 37%;
+    left: 0px;
+    padding-left: 24px;
+    padding-right: 24px;
+    gap: 14px;
 }
 
 /* media queries veiw */
@@ -598,6 +636,13 @@ details p {
 
     }
 
+    .slide img {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        object-fit: cover;
+    }
+
     .home-cards {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -626,6 +671,13 @@ details p {
 }
 
 @media(max-width:480px) {
+    .slide img {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        object-fit: cover;
+    }
+
     .home-cards {
         grid-template-columns: 1fr;
     }
