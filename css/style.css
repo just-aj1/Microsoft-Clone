@@ -747,4 +747,28 @@ div.grid-content.long>div>p {
     .side2 {
         width: 100%;
     }
+
+    /* xbox page */
+    #slide3>div>p,
+    #slide2>div>p,
+    #slide4>div>p {
+        display: none;
+    }
+
+    body>div.container.full>div>div:nth-child(1)>div.grid-content.long>div>p {
+        display: block;
+        padding-right: 10px;
+    }
+
+    .grid-content.short {
+        display: grid;
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .text-short {
+        position: relative;
+        width: auto;
+        background-color: green;
+    }
 }
